@@ -1,0 +1,98 @@
+[
+    {
+        "sourceArticle": "2f27d134-fc1a-485e-8f91-2a962376fbd7",
+        "target": "05ca14cb-64a8-453f-8527-2d2c1bdd1b26"
+    },
+    {
+        "sourceArticle": "2f27d134-fc1a-485e-8f91-2a962376fbd7",
+        "target": "d5d59c0d-5ad7-4167-8c03-d4379f1e6682"
+    },
+    {
+        "sourceArticle": "d5a1e12d-7347-4633-bdec-1781a6ff7c73",
+        "target": "8a483922-f560-46f6-8d9f-433f94b3ff3f"
+    },
+    {
+        "sourceArticle": "d5a1e12d-7347-4633-bdec-1781a6ff7c73",
+        "target": "7d27cc41-54e2-467b-9ce3-ae247c804767"
+    },
+    {
+        "sourceArticle": "a9d7e54e-467f-418a-89a1-d5795d02b6c7",
+        "target": "f384cd30-48f3-4782-bb92-7ee959f16c13"
+    },
+    {
+        "sourceArticle": "a9d7e54e-467f-418a-89a1-d5795d02b6c7",
+        "target": "e002eca1-bf73-4e39-9fe1-2111781bd93e"
+    },
+    {
+        "sourceArticle": "4eafd71e-2162-4c3c-8803-e59c75e2a1f9",
+        "target": "05ca14cb-64a8-453f-8527-2d2c1bdd1b26"
+    },
+    {
+        "sourceArticle": "4eafd71e-2162-4c3c-8803-e59c75e2a1f9",
+        "target": "d5d59c0d-5ad7-4167-8c03-d4379f1e6682"
+    },
+    {
+        "sourceArticle": "83d45931-1d99-4d3a-a104-486544ae97b1",
+        "target": "8a483922-f560-46f6-8d9f-433f94b3ff3f"
+    },
+    {
+        "sourceArticle": "83d45931-1d99-4d3a-a104-486544ae97b1",
+        "target": "7d27cc41-54e2-467b-9ce3-ae247c804767"
+    },
+    {
+        "sourceArticle": "7d499b5b-8bd0-47c2-b78b-67d6f589394e",
+        "target": "f384cd30-48f3-4782-bb92-7ee959f16c13"
+    },
+    {
+        "sourceArticle": "17b23d85-63c5-4b29-91e5-9fa2b4db4f4e",
+        "target": "05ca14cb-64a8-453f-8527-2d2c1bdd1b26"
+    },
+    {
+        "sourceArticle": "17b23d85-63c5-4b29-91e5-9fa2b4db4f4e",
+        "target": "d5d59c0d-5ad7-4167-8c03-d4379f1e6682"
+    },
+    {
+        "sourceArticle": "7adcb13a-0154-4675-b1e7-5e4b46ab364d",
+        "target": "8a483922-f560-46f6-8d9f-433f94b3ff3f"
+    },
+    {
+        "sourceArticle": "c27dc86f-f389-4421-987d-6f8bb13b2042",
+        "target": "f384cd30-48f3-4782-bb92-7ee959f16c13"
+    },
+    {
+        "sourceArticle": "7a3dc7fe-2942-4c4b-bd24-3c1a7b2b78fc",
+        "target": "05ca14cb-64a8-453f-8527-2d2c1bdd1b26"
+    },
+    {
+        "sourceArticle": "7a3dc7fe-2942-4c4b-bd24-3c1a7b2b78fc",
+        "target": "d5d59c0d-5ad7-4167-8c03-d4379f1e6682"
+    },
+    {
+        "sourceArticle": "8f1d7a6d-1949-4e4d-b9c2-89398c2c2c35",
+        "target": "7d27cc41-54e2-467b-9ce3-ae247c804767"
+    },
+    {
+        "sourceArticle": "3c85d2f9-4acb-454e-92b3-f90d89856c96",
+        "target": "e002eca1-bf73-4e39-9fe1-2111781bd93e"
+    },
+    {
+        "sourceArticle": "7c2e3d79-4b65-45a4-90d2-b9b3897d81e6",
+        "target": "05ca14cb-64a8-453f-8527-2d2c1bdd1b26"
+    },
+    {
+        "sourceArticle": "7c2e3d79-4b65-45a4-90d2-b9b3897d81e6",
+        "target": "d5d59c0d-5ad7-4167-8c03-d4379f1e6682"
+    },
+    {
+        "sourceArticle": "d5f4620a-ffbe-4f14-8c2c-518c3d2e84e8",
+        "target": "f384cd30-48f3-4782-bb92-7ee959f16c13"
+    },
+    {
+        "sourceArticle": "4d63d122-332e-4651-bc91-f9f0b9e8e5e7",
+        "target": "05ca14cb-64a8-453f-8527-2d2c1bdd1b26"
+    },
+    {
+        "sourceArticle": "4d63d122-332e-4651-bc91-f9f0b9e8e5e7",
+        "target": "7d27cc41-54e2-467b-9ce3-ae247c804767"
+    }
+]

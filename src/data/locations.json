@@ -1,0 +1,26 @@
+[
+    {
+        "id": "8e5c8b9a-7d85-4a7b-9189-60fd1fbbcc9b",
+        "title": "Northeast"
+    },
+    {
+        "id": "b7fbd396-3917-4d64-9a5d-4de9bc83b3f2",
+        "title": "Southeast"
+    },
+    {
+        "id": "c2187e5b-6b02-44e7-9c58-f4dfc711ba50",
+        "title": "Midwest"
+    },
+    {
+        "id": "f7e1cd9b-4eb5-40fb-97c1-cab5278e2bb4",
+        "title": "Southwest"
+    },
+    {
+        "id": "0c4bc4a6-3c3e-4f0d-8f96-9e2d44b5a75a",
+        "title": "Pacific Northwest"
+    },
+    {
+        "id": "4bb1e8c1-56fb-4eeb-8268-22e33013b91e",
+        "title": "West Coast"
+    }
+]

@@ -1,0 +1,122 @@
+[
+    {
+        "id": "3b1d8c27-66b7-4a3f-9b10-d9c7e7e6a26c",
+        "name": "Jane Thompson",
+        "affiliation": "University of California, Berkeley",
+        "ORCID": "0000-0001-5234-1234"
+    },
+    {
+        "id": "d9437b9d-7914-4b4d-9f55-3d18b5e72ebf",
+        "name": "Michael Adams",
+        "affiliation": "Harvard University",
+        "ORCID": "0000-0002-3456-7890"
+    },
+    {
+        "id": "4f7b9d88-6b5d-403a-9817-29d8a8f9959f",
+        "name": "Emily Rivera",
+        "affiliation": "Stanford University",
+        "ORCID": "0000-0003-0987-6543"
+    },
+    {
+        "id": "b26e5d89-9a19-4ff5-bdea-c2cb83f15b99",
+        "name": "James Lee",
+        "affiliation": "University of Chicago",
+        "ORCID": "0000-0004-5643-8910"
+    },
+    {
+        "id": "1fd6b423-b317-4ed5-8a3e-9bc8e6b0e7c5",
+        "name": "Sarah Green",
+        "affiliation": "Princeton University",
+        "ORCID": "0000-0005-2109-8765"
+    },
+    {
+        "id": "b7d836c1-69b3-4c4b-b8fa-5e4c72c8c60f",
+        "name": "Isabel Ramirez",
+        "affiliation": "Columbia University",
+        "ORCID": "0000-0006-3210-5678"
+    },
+    {
+        "id": "aef23c78-ea23-47f3-b6f9-8d4d2e5cfa79",
+        "name": "Samuel Parker",
+        "affiliation": "Yale University",
+        "ORCID": "0000-0007-6543-2109"
+    },
+    {
+        "id": "0f3cda28-14c8-4a97-a058-647a38d2dc8b",
+        "name": "Clara Nguyen",
+        "affiliation": "University of Texas at Austin",
+        "ORCID": "0000-0008-4321-1098"
+    },
+    {
+        "id": "b9a3c8fa-79bc-4991-b7b4-4cd5b5c8a2a1",
+        "name": "Vanessa Brooks",
+        "affiliation": "University of Michigan",
+        "ORCID": "0000-0009-8765-4321"
+    },
+    {
+        "id": "2ab7c326-2e2b-455b-8403-6d9f3c9a635f",
+        "name": "Marisol Vega",
+        "affiliation": "Duke University",
+        "ORCID": "0000-0010-1234-5678"
+    },
+    {
+        "id": "ac325b9d-fdf5-4e88-a5af-9e3b25d9dff5",
+        "name": "Alan Patel",
+        "affiliation": "University of Washington",
+        "ORCID": "0000-0011-2109-8765"
+    },
+    {
+        "id": "6e2a9b2c-f9c8-4b61-981a-68e3bb5d935a",
+        "name": "Owen Whitefeather",
+        "affiliation": "University of Arizona",
+        "ORCID": "0000-0012-4321-1098"
+    },
+    {
+        "id": "b921f2c7-d023-4b5d-97fa-c7d09ef432a6",
+        "name": "Laila Ahmed",
+        "affiliation": "Brown University",
+        "ORCID": "0000-0013-5678-3210"
+    },
+    {
+        "id": "8fd1a56e-f4d5-47b5-8651-ecf0c1bb842a",
+        "name": "Anthony Johnson",
+        "affiliation": "New York University",
+        "ORCID": "0000-0014-7890-1234"
+    },
+    {
+        "id": "0df5b2c3-bfd8-4749-b57a-1f2b3bc5e89c",
+        "name": "David Hernandez",
+        "affiliation": "Cornell University",
+        "ORCID": "0000-0015-9876-5432"
+    },
+    {
+        "id": "fa79254c-99d5-4d1f-beb5-94bc5d586b83",
+        "name": "Maya Lopez",
+        "affiliation": "University of Pennsylvania",
+        "ORCID": "0000-0016-7654-2109"
+    },
+    {
+        "id": "c40ae5a1-df3f-4bfa-8df3-60292b934f5f",
+        "name": "Thomas Jacobs",
+        "affiliation": "University of Southern California",
+        "ORCID": "0000-0017-3210-9876"
+    },
+    {
+        "id": "f0f9dc23-71c7-40af-8a42-c42d3e28ed8b",
+        "name": "Samantha Clark",
+        "affiliation": "University of Virginia",
+        "ORCID": "0000-0018-5432-1098"
+    },
+    {
+        "id": "77d8e7fb-c8e5-4b6c-94fc-526d74f6b462",
+        "name": "Philip Morris",
+        "affiliation": "Carnegie Mellon University",
+        "ORCID": "0000-0019-6543-8765"
+    },
+    {
+        "id": "c60c5d56-ecf7-46ba-b1a8-3f0d1548ab57",
+        "name": "Sofia Mendez",
+        "affiliation": "Johns Hopkins University",
+        "ORCID": "0000-0020-4321-5678"
+    }
+]

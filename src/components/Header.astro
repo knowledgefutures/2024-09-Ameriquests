@@ -1,0 +1,21 @@
+---
+// interface Props {
+// 	title: string;
+// 	body: string;
+// 	href: string;
+// }
+
+// const { href, title, body } = Astro.props;
+import ameriquests from '~/assets/ameriquests.png';
+import { Image } from 'astro:assets';
+---
+
+<nav class="p-4 flex justify-between items-center">
+	<a href="/"><Image class="mix-blend-darken h-8 w-auto" src={ameriquests} alt="logo" /></a>
+	<div class="flex space-x-8">
+		<a href="/">Gallery</a>
+		<a href="/cafe">AMQ Cafe</a>
+		<a href="/directory">Directory</a>
+		<a href="/about">About</a>
+	</div>
+</nav>
