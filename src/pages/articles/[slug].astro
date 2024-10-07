@@ -1,0 +1,50 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import articles from '~/data/articles.json';
+import GalleryNav from '~/components/GalleryNav';
+import { getArticleAuthors } from '~/utils/articles';
+import { Markdown } from '@astropub/md';
+
+export function getStaticPaths() {
+	return articles.map((exhibit) => {
+		return { params: { slug: exhibit.slug } };
+	});
+}
+const { slug } = Astro.params;
+const activeArticle = articles.find((article) => {
+	return article.slug === slug;
+});
+if (!activeArticle) {
+	return null;
+}
+---
+
+<Layout title={`Articles · ${activeArticle.title}`}>
+	<main>
+		<section class="relative pt-12 pb-8">
+			<h2 class="py-8 text-5xl font-bold max-w-screen-md">{activeArticle.title}</h2>
+
+			<div
+				class="z-10 scale-[.15] origin-top-right bg-neutral-700 border border-white rounded relative -top-44 right-4"
+			>
+				<div class="h-[calc(100vh-64px)]">
+					<GalleryNav client:only="react" />
+				</div>
+			</div>
+		</section>
+		<section class="-mt-[850px] grid grid-cols-2 gap-12 z-20 relative">
+			<section
+				class="max-w-prose"
+			>
+				<div class="my-8 pb-8 text-xl text-neutral-500 border-b border-b-neutral-300">
+					<div>{activeArticle.date} · {activeArticle.DOI}</div>
+					<div class="italic">by {getArticleAuthors(activeArticle.id)}</div>
+				</div>
+
+				<div class="prose font-serif">
+					<Markdown of={activeArticle.content} />
+				</div>
+			</section>
+		</section>
+	</main>
+</Layout>

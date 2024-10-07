@@ -1,0 +1,69 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import themes from '~/data/themes.json';
+import GalleryNav from '~/components/GalleryNav';
+import articles from '~/data/articles.json';
+import { getArticleAuthors } from '~/utils/articles';
+import articleLinks from '~/data/links';
+
+export function getStaticPaths() {
+	return themes.map((exhibit) => {
+		return { params: { slug: exhibit.slug } };
+	});
+}
+const { slug } = Astro.params;
+const activeTheme = themes.find((exhibit) => {
+	return exhibit.slug === slug;
+});
+if (!activeTheme) {
+	return null;
+}
+const activeArticleIds = articleLinks
+	.filter((link) => {
+		return link.target === activeTheme.id;
+	})
+	.map((link) => {
+		return link.sourceArticle;
+	});
+const activeArticles = articles.filter((article) => {
+	return activeArticleIds.includes(article.id);
+});
+
+---
+
+<Layout title={`Themes · ${activeTheme.title}`}>
+	<main>
+		<section class="relative pt-12 pb-8">
+			<div
+				class={`-z-20 absolute bg-[url('/galaxy.jpg')] brightness-[.75] bg-cover bg-center bg-no-repeat h-48 w-full rounded-sm`}
+			>
+			</div>
+			<h2 class="p-8 text-white text-5xl font-bold">{activeTheme.title}</h2>
+
+			<div
+				class="z-10 scale-[.15] origin-top-right bg-neutral-700 border border-white rounded relative -top-20 right-4"
+			>
+				<div class="h-[calc(100vh-64px)]">
+					<GalleryNav client:only="react" />
+				</div>
+			</div>
+		</section>
+		<section class="-mt-[700px] grid grid-cols-1 gap-12 z-20 relative">
+			{
+				activeArticles.map((article) => {
+					return (
+						<a
+							href={`/articles/${article.slug}`}
+						>
+							<div class="text-xl font-bold truncate">{article.title}</div>
+							<div class="text-base text-neutral-500 -mt-1">
+								{article.date} ·{' '}
+								<span class="italic">by {getArticleAuthors(article.id)}</span>
+							</div>
+						</a>
+					);
+				})
+			}
+		</section>
+	</main>
+</Layout>

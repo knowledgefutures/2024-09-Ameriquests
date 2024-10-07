@@ -1,7 +1,7 @@
 ---
 import Layout from '~/layouts/Layout.astro';
-import categories from '~/data/categories';
-import DirectoryCrumbs from '~/components/DirectoryCrumbs.astro';
+
+import ChatNav from '~/components/ChatNav';
 ---
 
 <Layout title="AMQ Cafe">
@@ -13,10 +13,8 @@ import DirectoryCrumbs from '~/components/DirectoryCrumbs.astro';
 			just listen, everyone's invited to engage. Grab a virtual coffee and join the
 			conversation!
 		</div>
-		<section class="my-12 grid grid-cols-2">
-			<div>Items</div>
-			<div>Chat box</div>
-		</section>
+		
+		<ChatNav client:only="react"/>
 
 	</main>
 </Layout>
