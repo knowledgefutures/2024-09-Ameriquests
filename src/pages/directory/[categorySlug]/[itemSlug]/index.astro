@@ -1,0 +1,67 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import authors from '~/data/authors.json';
+import articles from '~/data/articles.json';
+import articleLinks from '~/data/links';
+import categories from '~/data/categories';
+import DirectoryCrumbs from '~/components/DirectoryCrumbs.astro';
+import {getArticleAuthors} from '~/utils/articles';
+
+export function getStaticPaths() {
+	return categories
+		.map((category) => {
+			return category.data.map((item) => {
+				return { params: { categorySlug: category.slug, itemSlug: item.slug } };
+			});
+		})
+		.flat();
+}
+const { categorySlug, itemSlug } = Astro.params;
+const activeCategory = categories.find((category) => {
+	return category.slug === categorySlug;
+});
+if (!activeCategory) {
+	return null;
+}
+
+const activeItem = activeCategory.data.find((item) => {
+	return item.slug === itemSlug;
+});
+
+if (!activeItem) {
+	return null;
+}
+const activeArticleIds = articleLinks
+	.filter((link) => {
+		return link.target === activeItem.id;
+	})
+	.map((link) => {
+		return link.sourceArticle;
+	});
+const activeArticles = articles.filter((article) => {
+	return activeArticleIds.includes(article.id);
+});
+
+---
+
+<Layout title={`Directory > ${activeCategory.title} > ${activeItem.title}`}>
+	<main>
+		<DirectoryCrumbs items={[activeCategory, activeItem]}/>
+		<ul class="list-disc pl-4 text-lg space-y-4">
+			{
+				activeArticles.map((article) => { 
+					return (
+						<li>
+							<a
+								href={`/directory/${activeCategory.slug}/${activeItem.slug}/${article.slug}`}
+							>
+								<div>{article.title}</div>
+								<div class="text-base text-neutral-500 -mt-1">{article.date} · <span class="italic">by {getArticleAuthors(article.id)}</span></div>
+							</a>
+						</li>
+					);
+				})
+			}
+		</ul>
+	</main>
+</Layout>

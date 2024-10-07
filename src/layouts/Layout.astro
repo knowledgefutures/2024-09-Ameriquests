@@ -5,6 +5,8 @@ interface Props {
 
 const { title } = Astro.props;
 import Header from '~/components/Header.astro'
+import "./base.css";
+
 ---
 
 <!doctype html>
@@ -17,7 +19,7 @@ import Header from '~/components/Header.astro'
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="max-w-screen-xl m-auto">
+	<body class="max-w-screen-xl m-auto px-4 mb-24">
 		<Header />
 		<slot />
 	</body>
@@ -37,5 +39,8 @@ import Header from '~/components/Header.astro'
 	html {
 		font-family: system-ui, sans-serif;
 		background: #F6F3EE;
+	}
+	a:hover {
+		text-decoration: underline;
 	}
 </style>

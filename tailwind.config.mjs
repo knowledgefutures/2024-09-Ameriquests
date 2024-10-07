@@ -2,7 +2,11 @@
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				'mono': ['IBM Plex Mono', 'ui-monospace', 'SFMono-Regular', 'Courier'],
+			},
+		},
 	},
-	plugins: [],
+	plugins: [require('@tailwindcss/typography')],
 }

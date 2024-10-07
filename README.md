@@ -1,15 +1,15 @@
 # Ameriquest prototype
 
-- [ ] Basic Header
-- [ ] Content and data
+- [x] Basic Header
+- [x] Content and data
   - [x] Authors
   - [x] Exhibits
   - [x] Volumes
   - [x] Locations
   - [x] Themes
-  - [ ] Articles
+  - [x] Articles
   - [x] Chats
-  - [ ] Relationships
+  - [x] Relationships
 - [ ] Chat room functionality
 - [ ] Articles items in collections
 

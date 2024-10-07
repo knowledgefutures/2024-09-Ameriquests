@@ -2,6 +2,7 @@
     {
         "id": "b21b7c2c-9e56-44f4-8458-f567f26ec9a2",
         "title": "Crossing Borders",
+		"slug": "crossing-borders",
         "curator": "Dr. Isabel Ramirez",
         "description": "This exhibit explores the literal and metaphorical crossings of borders, both geographic and cultural, that define the immigrant experience in America. Through curated essays, memoirs, and multimedia research, this section examines how migration transforms individual identities and reshapes the American landscape. Themes include forced migration, the concept of sanctuary, and the reimagining of home in a new land.",
         "keyWorks": [
@@ -13,6 +14,7 @@
     {
         "id": "e8b3c0ef-8f43-42ff-8701-55cf912b0d0b",
         "title": "The Dream and Its Discontents",
+		"slug": "the-dream-and-its-discontents",
         "curator": "Prof. Samuel Parker",
         "description": "This exhibit delves into the many faces of the American Dream, from its aspirational promise of success and freedom to its darker side of disillusionment and inequality. The curated works focus on the narratives of both those who have achieved the dream and those whose pursuit of it reveals systemic failures. Issues of wealth disparity, racial inequality, and the myth of meritocracy take center stage in this thought-provoking exhibit.",
         "keyWorks": [
@@ -24,6 +26,7 @@
     {
         "id": "d39a5970-fc5d-4213-9fe3-19f5d1c15d68",
         "title": "Environmental Frontiers",
+		"slug": "environmental-frontiers",
         "curator": "Dr. Clara Nguyen",
         "description": "As America expands, so does its impact on the environment. This exhibit focuses on the complex relationship between human progress and environmental degradation, offering a narrative of environmental justice, sustainability, and resistance. It features both scholarly articles and visual documentaries that highlight the impact of urban renewal, industrial growth, and conservation efforts across the Americas.",
         "keyWorks": [
@@ -35,6 +38,7 @@
     {
         "id": "ea3f8db9-3e65-41d2-83cb-d1f2fb0bc524",
         "title": "The African American Quest for Justice",
+		"slug": "the-african-american-quest-for-justice",
         "curator": "Prof. Vanessa Brooks",
         "description": "This exhibit presents the rich and ongoing history of African American struggles for equality and justice in America. From slavery and Jim Crow to Black Lives Matter, this collection of articles, personal narratives, and historical archives traces the arc of Black resistance and resilience. The exhibit also examines the role of art, music, and literature in shaping African American identity and activism.",
         "keyWorks": [
@@ -46,6 +50,7 @@
     {
         "id": "8af57ec1-7417-4f4b-b13a-5b2b0fb2a2a4",
         "title": "Transnational Americas",
+		"slug": "transnational-americas",
         "curator": "Dr. Marisol Vega",
         "description": "The Americas are a melting pot of cultures, peoples, and traditions that transcend national borders. This exhibit looks at how transnational identities form and shift, focusing on diaspora communities, cross-border collaborations, and the blending of cultures across the Americas. With contributions from anthropologists, sociologists, and cultural theorists, the exhibit highlights the fluidity of national and ethnic identities in a globalized world.",
         "keyWorks": [
@@ -57,6 +62,7 @@
     {
         "id": "6a9357fc-d1b1-42af-860d-7ed96b243c9c",
         "title": "Technological Quests",
+		"slug": "technological-quests",
         "curator": "Dr. Alan Patel",
         "description": "In this exhibit, technology is positioned as both a literal and metaphorical vehicle for quests toward progress and innovation in America. It highlights how technological advancements in fields such as artificial intelligence, biotechnology, and space exploration have redefined the American landscape. The curated works explore the societal impacts of these advancements, questioning the ethical and cultural implications of technology-driven change.",
         "keyWorks": [
@@ -68,6 +74,7 @@
     {
         "id": "5dc4ff21-4174-4e23-bb83-407f1e212fbf",
         "title": "The Indigenous Perspective",
+		"slug": "the-indigenous-perspective",
         "curator": "Prof. Owen Whitefeather",
         "description": "This exhibit focuses on Indigenous narratives that challenge the dominant historical and cultural narratives of America. It centers on the Indigenous quests for sovereignty, land rights, and cultural preservation in the face of centuries of colonization. Through curated storytelling, legal analysis, and art, this exhibit shines a light on the Indigenous experience, offering a different lens on the idea of America as a quest.",
         "keyWorks": [
@@ -77,3 +84,5 @@
         ]
     }
 ]
+
+

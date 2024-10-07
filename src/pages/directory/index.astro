@@ -1,0 +1,23 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import categories from '~/data/categories';
+import DirectoryCrumbs from '~/components/DirectoryCrumbs.astro';
+
+---
+
+<Layout title="Directory">
+	<main>
+		<DirectoryCrumbs items={[]}/>
+		<ul class="list-disc pl-4 text-lg space-y-4">
+			{
+				categories.map((category) => {
+					return (
+						<li>
+							<a href={`/directory/${category.slug}`}>{category.title}</a>
+						</li>
+					);
+				})
+			}
+		</ul>
+	</main>
+</Layout>

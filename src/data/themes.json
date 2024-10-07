@@ -1,26 +1,32 @@
 [
     {
         "id": "05ca14cb-64a8-453f-8527-2d2c1bdd1b26",
-        "theme": "Migration"
+        "title": "Migration",
+		"slug": "migration"
     },
     {
         "id": "d5d59c0d-5ad7-4167-8c03-d4379f1e6682",
-        "theme": "Identity"
+        "title": "Identity",
+		"slug": "identity"
     },
     {
         "id": "8a483922-f560-46f6-8d9f-433f94b3ff3f",
-        "theme": "Journey"
+        "title": "Journey",
+		"slug": "journey"
     },
     {
         "id": "7d27cc41-54e2-467b-9ce3-ae247c804767",
-        "theme": "Citizenship"
+        "title": "Citizenship",
+		"slug": "citizenship"
     },
     {
         "id": "f384cd30-48f3-4782-bb92-7ee959f16c13",
-        "theme": "Culture"
+        "title": "Culture",
+		"slug": "culture"
     },
     {
         "id": "e002eca1-bf73-4e39-9fe1-2111781bd93e",
-        "theme": "Place"
+        "title": "Place",
+		"slug": "place"
     }
 ]

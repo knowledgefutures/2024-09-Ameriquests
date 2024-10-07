@@ -8,14 +8,25 @@
 // const { href, title, body } = Astro.props;
 import ameriquests from '~/assets/ameriquests.png';
 import { Image } from 'astro:assets';
+const links = [
+	{ title: 'Gallery', href: '/', active: Astro.url.pathname === '/' },
+	{ title: 'AMQ Cafe', href: '/cafe', active: Astro.url.pathname.startsWith('/cafe') },
+	{ title: 'Directory', href: '/directory', active: Astro.url.pathname.startsWith('/directory') },
+	{ title: 'About', href: '/about', active: Astro.url.pathname.startsWith('/about') },
+];
 ---
 
-<nav class="p-4 flex justify-between items-center">
+<nav class="py-4 flex justify-between items-center border-b border-b-neutral-300">
 	<a href="/"><Image class="mix-blend-darken h-8 w-auto" src={ameriquests} alt="logo" /></a>
 	<div class="flex space-x-8">
-		<a href="/">Gallery</a>
-		<a href="/cafe">AMQ Cafe</a>
-		<a href="/directory">Directory</a>
-		<a href="/about">About</a>
+		{
+			links.map((link) => {
+				return (
+					<a href={link.href} class={link.active ? 'underline underline-offset-4' : 'underline-offset-4'}>
+						{link.title}
+					</a>
+				);
+			})
+		}
 	</div>
 </nav>

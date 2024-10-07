@@ -1,0 +1,37 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import categories from '~/data/categories';
+import DirectoryCrumbs from '~/components/DirectoryCrumbs.astro';
+
+export function getStaticPaths() {
+	return categories.map((category) => {
+		return { params: { categorySlug: category.slug } };
+	});
+}
+const { categorySlug } = Astro.params;
+const activeCategory = categories.find((category) => {
+	return category.slug === categorySlug;
+});
+if (!activeCategory) {
+	return null;
+}
+---
+
+<Layout title={`Directory > ${activeCategory.title}`}>
+	<main>
+		<DirectoryCrumbs items={[activeCategory]}/>
+		<ul class="list-disc pl-4 text-lg space-y-4">
+			{
+				activeCategory.data.map((data) => {
+					return (
+						<li>
+							<a href={`/directory/${activeCategory.slug}/${data.slug}`}>
+								{data.title}
+							</a>
+						</li>
+					);
+				})
+			}
+		</ul>
+	</main>
+</Layout>

@@ -1,0 +1,91 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import categories from '~/data/categories';
+import articleLinks from '~/data/links';
+import articles from '~/data/articles.json';
+import { Markdown } from '@astropub/md';
+import DirectoryCrumbs from '~/components/DirectoryCrumbs.astro';
+import { getArticleAuthors } from '~/utils/articles';
+
+export function getStaticPaths() {
+	return categories
+		.map((category) => {
+			return category.data.map((item) => {
+				const activeArticleIds = articleLinks
+					.filter((link) => {
+						return link.target === item.id;
+					})
+					.map((link) => {
+						return link.sourceArticle;
+					});
+				const activeArticles = articles.filter((article) => {
+					return activeArticleIds.includes(article.id);
+				});
+				return activeArticles.map((article) => {
+					return {
+						params: {
+							categorySlug: category.slug,
+							itemSlug: item.slug,
+							articleSlug: article.slug,
+						},
+					};
+				});
+			});
+		})
+		.flat()
+		.flat();
+}
+
+const { categorySlug, itemSlug, articleSlug } = Astro.params;
+const activeCategory = categories.find((category) => {
+	return category.slug === categorySlug;
+});
+if (!activeCategory) {
+	return null;
+}
+
+const activeItem = activeCategory.data.find((item) => {
+	return item.slug === itemSlug;
+});
+
+if (!activeItem) {
+	return null;
+}
+
+const activeArticle = articles.find((article) => {
+	return article.slug === articleSlug;
+});
+
+if (!activeArticle) {
+	return null;
+}
+
+---
+
+<Layout
+	title={`Directory > ${activeCategory.title} > ${activeItem.title} > ${activeArticle.title}`}
+>
+	<main>
+		<DirectoryCrumbs items={[activeCategory, activeItem]} />
+
+		<div class="flex">
+			<section
+				class="max-w-screen-md bg-stone-100 py-4 px-8 shadow-lg border border-neutral-300 rounded-sm"
+			>
+				<h3 class="text-5xl mt-8 mb-4 font-bold">{activeArticle.title}</h3>
+				<div class="my-8 pb-8 text-xl text-neutral-500 border-b border-b-neutral-300">
+					<div>{activeArticle.date} · {activeArticle.DOI}</div>
+					<div class="italic">by {getArticleAuthors(activeArticle.id)}</div>
+				</div>
+
+				<div class="prose font-serif">
+					<Markdown of={activeArticle.content} />
+				</div>
+			</section>
+			<div class="px-2 space-y-2 text-neutral-500">
+				<div><a href={`/articles/${activeArticle.slug}`}>Go to Gallery view</a></div>
+				<div><a href="">Download PDF</a></div>
+			</div>
+		</div>
+	</main>
+</Layout>
