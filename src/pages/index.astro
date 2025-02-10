@@ -4,16 +4,18 @@ import Layout from '../layouts/Layout.astro';
 // import location from '~/assets/location.jpg';
 // import gallery from '~/assets/gallery.jpg';
 import GalleryNav from '~/components/GalleryNav.tsx';
+import LandingGrid from '~/components/LandingGrid';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Ameriquests">
 	<main>
 		<div class={`bg-[url('/location.jpg')] brightness-[.4] bg-cover bg-center bg-no-repeat -z-10 absolute h-[calc(100vh-64px)] w-[100vw] left-[50%] -ml-[50vw]`} />
 		<!-- <div class={`bg-[url('/gallery2.jpg')] bg-cover bg-center bg-no-repeat -z-10 absolute h-[calc(100vh-64px)] w-[100vw] left-[50%] -ml-[50vw]`} /> -->
 		<!-- <div class={`bg-[url('/galaxy.jpg')] bg-cover bg-center bg-no-repeat -z-10 absolute h-[calc(100vh-64px)] w-[100vw] left-[50%] -ml-[50vw]`} /> -->
+		<LandingGrid client:load/>
 
-		<div class="h-[calc(100vh-64px)]">
+		<!-- <div class="h-[calc(100vh-64px)]">
 			<GalleryNav client:only="react" />
-		</div>
+		</div> -->
 	</main>
 </Layout>

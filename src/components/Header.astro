@@ -10,27 +10,30 @@ import ameriquests from '~/assets/ameriquests.png';
 import { Image } from 'astro:assets';
 const isLanding = Astro.url.pathname === '/';
 const links = [
-	{ title: 'Gallery', href: '/', active: isLanding },
-	{ title: 'AMQ Cafe', href: '/cafe', active: Astro.url.pathname.startsWith('/cafe') },
+	// { title: 'Gallery', href: '/', active: isLanding },
 	{ title: 'Directory', href: '/directory', active: Astro.url.pathname.startsWith('/directory') },
+	{ title: 'AMQ Cafe', href: '/cafe', active: Astro.url.pathname.startsWith('/cafe') },
 	{ title: 'About', href: '/about', active: Astro.url.pathname.startsWith('/about') },
 ];
 ---
 
 <nav
-	class={`py-4 flex justify-between items-center ${isLanding ? '' : 'border-b'} border-b-neutral-300`}
+	class={`py-4 flex flex-col space-y-4 md:space-y-0 md:flex-row md:justify-between items-center border-b border-b-neutral-500`}
 >
 	<a href="/"><Image class="mix-blend-darken h-8 w-auto" src={ameriquests} alt="logo" /></a>
-	<div class="flex space-x-8">
+	<div class="flex space-x-6">
 		{
-			links.map((link) => {
+			links.map((link, index) => {
 				return (
+					<>
+					{index !== 0 && <span>·</span>}
 					<a
 						href={link.href}
 						class={link.active ? 'underline underline-offset-4' : 'underline-offset-4'}
 					>
 						{link.title}
 					</a>
+					</>
 				);
 			})
 		}

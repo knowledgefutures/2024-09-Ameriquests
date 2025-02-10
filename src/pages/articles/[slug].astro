@@ -4,6 +4,7 @@ import articles from '~/data/articles.json';
 import GalleryNav from '~/components/GalleryNav';
 import { getArticleAuthors } from '~/utils/articles';
 import { Markdown } from '@astropub/md';
+import { sections } from '~/utils/sections';
 
 export function getStaticPaths() {
 	return articles.map((exhibit) => {
@@ -17,26 +18,54 @@ const activeArticle = articles.find((article) => {
 if (!activeArticle) {
 	return null;
 }
+const tempContent: any = {
+	exhibits: ['Crossing Borders', 'Transnational Americas'],
+	locations: ['Pacific Northwest'],
+	themes: ['Identity', 'Migration', 'Place'],
+	volumes: ['2024'],
+};
 ---
 
 <Layout title={`Articles · ${activeArticle.title}`}>
 	<main>
-		<section class="relative pt-12 pb-8">
-			<div class="text-neutral-500 text-base">Exhibit: The Dream and Its Discontents  <span class="px-4">·</span>  Locations: Northeast, Southeast</div>
-			<h2 class="py-8 text-5xl font-bold max-w-screen-md">{activeArticle.title}</h2>
-
+		<section>
 			<div
+				class="text-neutral-500 text-sm py-4 border-b border-b-neutral-300 flex flex-wrap space-x-24"
+			>
+				{
+					sections.map((section) => {
+						const currentContent = tempContent[section.title.toLowerCase()] || [];
+						return (
+							<div>
+								<div class="text-neutral-600">{section.title}</div>
+								<div class="flex space-x-2">
+									{currentContent.map((item:string) => {
+										return (
+											<div class={`bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs whitespace-nowrap ${section.bgClass}`}>
+												{item}
+											</div>
+										);
+									})}
+								</div>
+							</div>
+						);
+					})
+				}
+			</div>
+		</section>
+		<section class="relative pt-4 pb-8">
+			<h2 class="py-4 text-5xl font-bold max-w-screen-md">{activeArticle.title}</h2>
+
+			<!-- <div
 				class="z-10 scale-[.15] origin-top-right bg-neutral-700 border border-white rounded relative -top-44 right-4"
 			>
 				<div class="h-[calc(100vh-64px)]">
 					<GalleryNav client:only="react" />
 				</div>
-			</div>
+			</div> -->
 		</section>
-		<section class="-mt-[850px] grid grid-cols-2 gap-12 z-20 relative">
-			<section
-				class="max-w-prose"
-			>
+		<section class="grid grid-cols-2 gap-12 z-20 relative">
+			<section class="max-w-prose">
 				<div class="my-8 pb-8 text-xl text-neutral-500 border-b border-b-neutral-300">
 					<div>{activeArticle.date} · {activeArticle.DOI}</div>
 					<div class="italic">by {getArticleAuthors(activeArticle.id)}</div>

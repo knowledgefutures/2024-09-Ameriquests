@@ -34,26 +34,24 @@ const activeArticles = articles.filter((article) => {
 	<main>
 		<section class="relative pt-12 pb-8">
 			<div
-				class={`-z-20 absolute bg-[url('/gallery2.jpg')] brightness-[.75] bg-cover bg-center bg-no-repeat h-48 w-full rounded-sm`}
+				class={`-z-20  bg-[url('/gallery2.jpg')] brightness-[.75] bg-cover bg-center bg-no-repeat h-48 w-full rounded-sm`}
 			>
+				<h2 class="p-8 text-white text-5xl font-bold">{activeExhibit.title}</h2>
 			</div>
-			<h2 class="p-8 text-white text-5xl font-bold">{activeExhibit.title}</h2>
 
-			<div
+			<!-- <div
 				class="z-10 scale-[.15] origin-top-right bg-neutral-700 border border-white rounded relative -top-20 right-4"
 			>
 				<div class="h-[calc(100vh-64px)]">
 					<GalleryNav client:only="react" />
 				</div>
-			</div>
+			</div> -->
 		</section>
-		<section class="-mt-[700px] grid grid-cols-1 gap-12 z-20 relative">
+		<section class="grid grid-cols-1 gap-12 z-20 relative">
 			{
 				activeArticles.map((article) => {
 					return (
-						<a
-							href={`/articles/${article.slug}`}
-						>
+						<a href={`/articles/${article.slug}`}>
 							<div class="text-xl font-bold truncate">{article.title}</div>
 							<div class="text-base text-neutral-500 -mt-1">
 								{article.date} ·{' '}
